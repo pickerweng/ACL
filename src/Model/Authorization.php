@@ -53,8 +53,8 @@ class Authorization
      * The entity targeted by the authorization.
      * If null, then $entityClass is used and this authorization is at class-scope.
      *
-     * @ORM\Column(name="entity_id", type="integer", nullable=true)
-     * @var int|null
+     * @ORM\Column(name="entity_id", type="guid", nullable=true)
+     * @var string|null
      */
     protected $entityId;
 
@@ -210,7 +210,7 @@ class Authorization
     }
 
     /**
-     * @param int $id
+     * @param string $id
      */
     public function setId($id)
     {
@@ -218,7 +218,7 @@ class Authorization
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getId()
     {

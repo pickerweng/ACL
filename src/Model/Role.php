@@ -20,9 +20,10 @@ use MyCLabs\ACL\ACL;
 abstract class Role
 {
     /**
-     * @var int
-     * @ORM\Id @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @var string
+     * @ORM\Id 
+     * @ORM\GeneratedValue(strategy="UUID")
+     * @ORM\Column(type="guid")
      */
     protected $id;
 
